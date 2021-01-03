@@ -1,0 +1,94 @@
+{% extends 'HOME/basic.html' %}
+{% block css %}
+<style type="text/css">
+
+		#marsimage{
+<!--			    background-color: teal;-->
+                padding-block-start: 3px;
+                margin-top: 10px;
+                border: 2px black solid;
+                margin-bottom: 5px;
+		}
+		#spacing{
+		padding-block-start: 3px;
+		}
+		.bgimage{
+        padding-top: 3px;
+        padding-block-end: 4px;
+		background-image: url('/media/1781.jpg')
+
+		}
+</style>
+
+{% endblock %}
+{% block title %} TEAM {% endblock %}
+{%block teamactive %}active{% endblock %}
+{% block body %}
+{% load humanize %}
+<div class="bgimage">
+<div class="container" id="marsimage">
+<div id="spacing">
+    <div class="jumbotron my-2" id="colorchange" style="background-color: turquoise;">
+  <h1 class="text-success display-4 text-center">TEAM INFERNO</h1>
+  <p class="my-3">Team Inferno DTU is a technical team which was founded in September 2013. In 2017, the team reinvented itself,
+redirecting its boundless creativity, technical expertise and experience gained from previous successful ventures, into
+building rovers for exploring the terrain of Mars, and participating in various rover challenges.</p>
+ <div>
+  <a class="mt-1 btn btn-primary btn-lg float-left" href="#" role="button">Wanna Sponsor Us</a>
+  <a class="mt-1 btn btn-primary btn-lg float-right" href="#" role="button">Know About Our Projects</a>
+ </div>
+</div>
+    <div class="container mt-3">
+    <div class="row mb-2">
+  {% for mem in teaminferno %}
+      <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">{{mem.name}}</strong>
+            <h3 class="mb-0">{{mem.position}}</h3>
+<!--              <div class="my-2">-->
+<!--            <p class="card-text">{{mem.thought}}</p>-->
+<!--              </div>-->
+              <br>
+              <br>
+              <div>
+              <h4 class="mt-0 mb-0">Follow in:</h4>
+                            <span class="linked{{mem.sno}}">
+                            <a href="{{mem.linkedinid}}"><img class="img-fluid" style="max-width: 40%;height: auto;" src="/media/linked.png"></a>
+                            </span>
+                            </div>
+          </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="/media/{{mem.imageprofile}}" class="bd-placeholder-img" width="200" height="250" aria-label="Placeholder: Thumbnail">
+        </div>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:2 %}
+    </div> <div class="row mb-2">
+  {% endif %}
+    {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+    let divcolor=document.getElementById('colorchange')
+divcolor.addEventListener("mouseenter", function(e) {
+    if(divcolor.style.backgroundColor=='turquoise'){
+    divcolor.style.backgroundColor='black';
+    }
+    console.log("hello");
+  });
+  divcolor.addEventListener("mouseleave", function(e) {
+    if(divcolor.style.backgroundColor='black'){
+        divcolor.style.backgroundColor='turquoise';
+    }
+    console.log("hello1");
+  });
+
+</script>
+{% endblock %}

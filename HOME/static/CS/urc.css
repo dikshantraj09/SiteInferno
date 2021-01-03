@@ -1,0 +1,26 @@
+#spacing
+{
+	padding-block-start: 3px;
+}
+.bg2image
+{
+ padding-top: 3px;
+ padding-block-end: 4px;
+ }
+ .bg1image
+ {
+  background-image: url('/media/marsbg3.jpg');
+
+ }
+
+h1{
+color:red;
+}
+h2{
+color:gold;
+}
+h3{
+color:aqua;}
+li,p{
+color:white;
+}

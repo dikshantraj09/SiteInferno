@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'CS/basic.css' %}" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
+        {% block CSS %}{% endblock %}
+       <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@515&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+  {% block inferno %}{% endblock %}
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">TEAM INFERNO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav" style="margin-left: auto;letter-spacing: 1px;">
+      <li class="nav-item {%block homeactive %}{% endblock %}">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item {%block projectactive %}{% endblock %}">
+        <a class="nav-link" href="/project/">Our Projects</a>
+        </li>
+        <li class="nav-item dropdown {%block dropactive %}{% endblock %}">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Competitions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/urc/">URC</a>
+          <a class="dropdown-item" href="/irdc/">IRC</a>
+        </div>
+        </li>
+        <li class="nav-item {%block contactactive %}{% endblock %}">
+        <a class="nav-link" href="/contact/">Write to Us!!</a>
+        </li>
+       <li class="nav-item {%block teamactive %}{% endblock %}">
+        <a class="nav-link" href="/team/">Team</a>
+        </li>
+        <li class="nav-item {%block sponsoractive %}{% endblock %}">
+        <a class="nav-link" href="/sponsor/">Sponsors</a>
+        </li>
+    </ul>
+  </nav>
+
+  {% for message in messages %}
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+      <strong>Message:</strong> {{message}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+  <div>
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-12 segment-one">
+                        <h3>About Inferno</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-12 segment-two">
+                        <h2>EXPLORE</h2>
+                        <ul>
+                            <li><a href="urc/">About URC</a></li>
+                            <li><a href="irdc/">About IRC</a></li>
+                            <li><a href="#">IRC '19</a></li>
+                            <li><a href="/gallery">Gallery</a></li>
+                            <li><a href="/sponsors">Our Sponsors</a></li>
+                        </ul>
+			        </div>
+                    <div class="col-md-3 col-sm-3 col-xs-12 segment-three">
+                        <h2>Reach Us</h2>
+                        <p>Pllease follow us on our Social Media to remain updated.</p>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                        <div class="reach1 pt-2">
+                            <i class="fas fa-envelope px-2"></i>
+                             teaminferno@gmail.com
+                        </div>
+                        <div class="reach2 pt-2">
+                            <i class="fas fa-phone-alt px-2"></i> +91 8182832772
+                        </div>
+                    </div>
+			<div class="col-md-3 col-sm-3 col-xs-12 segment-four">
+				<h2>Sponsor Us</h2>
+				<p>Your Contributions help us function and build effective rovers.</p>
+				<div class="buton">
+					<a class="btn btn-secondary px-3" href="#" role="button">Know More</a>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<p class="footer-bottom-text">Made by students of Team Inferno-DTU &copy</p>
+
+</footer>
+
+</div>
+
+    {% block js %}{% endblock %}
+    <script src="https://kit.fontawesome.com/5ec689df9a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

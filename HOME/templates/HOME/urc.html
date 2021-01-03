@@ -1,0 +1,65 @@
+{% extends 'HOME/basic.html' %}
+{% load static %}
+{% block CSS %}
+ <link rel="stylesheet" href="{% static 'CS/urc.css' %}" type="text/css" />
+{% endblock %}
+{% block title%}URC{% endblock %}
+{%block dropactive %}active{% endblock %}
+{% block body %}
+    <div class="bg1image">
+    <div class="container">
+    <div class="bg2image">
+    <div id="spacing">
+      <h1 class="display-4 text-center">University Rover Challenge</h1>
+      <p class="lead">The University Rover Challenge (URC) by the Mars Society is a robotics competition for university level students that challenges teams to design and build a rover that would be of use to early explorers on Mars.[1] The competition is held annually at the Mars Desert Research Station, outside Hanksville, Utah in the United States. The site was selected by the Mars Society for its geographic similarity to Mars: In addition to being a largely barren desert area, the soil in the area has a chemical composition similar to Martian soil. The competition has also expanded internationally to include the European Rover Challenge, Canadian International Rover Challenge, and the Indian Rover Challenge as part of the Rover Challenge Series.</p>
+      <hr class="my-4" style="border-color: #212529">
+
+        <h2>TASKS</h2>
+
+        <h3>ERDT</h3>
+        <p>Rovers must pick up and deliver objects in the field, such as screwdrivers, hammers, toolboxes, rocks, etc. Rovers are required to traverse a wide variety of terrain -- anything from soft sandy areas, to rock and boulder fields, to vertical drops. Teams are given approximate GPS coordinates for each pickup and delivery location, and potentially specific instructions for particular objects. Scoring is based on teams' ability to pick up and deliver objects to their correct locations.</p>
+            </p>
+        <hr class="my-4" style="border-color: #212529">
+        <h3>EQUIPMENT SERVICING</h3>
+        <p>
+            Rovers shall be required to perform several dexterous operations on a mock-up equipment system.Rovers are required to tow a wagon carrying a fuel canister to a generator, fill up the fuel tank, swap the regulator on gas cylinders, and start the generator by pressing a button. Previous equipment tasks have included pumping air into an inflatable habitat, and cleaning solar panels.</p>
+        <hr class="my-4" style="border-color: #212529">
+        <h3>AUTONOMOUS</h3>
+        <p>Here, autonomous means without teleoperation -- that is, without operators from the base station giving commands or user input. The rover must do all its decision-making on board. However, teleoperated scouting is allowed in the earlier stages.
+        The markers in this task are tennis balls and approximate GPS coordinates given to teams. As the stages get more difficult, the GPS coordinates will become increasingly vague and there will be more obstacles between the tennis balls, requiring obstacle avoidance and autonomous route finding. In addition, teleoperated scouting is allowed in the earlier stages, but not in the later ones.</p>
+        <hr class="my-4" style="border-color: #212529">
+        <h3>SCIENCE</h3>
+        <p>Teams must investigate multiple sites of biological interest, using instruments and methods of their choice, where they must conduct analysis of samples entirely on board the rover. The goal of the task is to determine the presence or absence of life, either extinct or extant, at designated sites. After the 20-30 minutes of investigation time, teams must also prepare a short presentation to give to the judges on-site, which presents their results, analysis, and conclusions. Analysis is expected to be relevant to the setting on Earth while demonstrating an understanding of how these observations would translate to a Martian setting.</p><hr class="my-4" style="border-color: #212529">
+        <h2>Rules and Regulations</h2>
+
+        <h3>Rover Rules</h3>
+        <ul>
+            <li>Rovers must not exceed 50kg in any one configuration</li>
+            <li>Rovers must fit within a 1.2 meter by 1.2 meter footprint</li>
+            <li>Rovers must have a total cost not exceeding $18,000</li>
+            <li>Rovers must use power and propulsion systems that are applicable to operations on Mars (e.g. no air-breathing systems)</li>
+            <li>Use of airborne vehicles is prohibited</li>
+        </ul>
+        <hr class="my-4" style="border-color: #212529">
+        <h3>Operation Rules</h3>
+        <ul>
+            <li>Teams will operate their rovers in real time from designated command and control stations.</li>
+            <li>Rovers are not expected to travel more than 1km from the base station</li>
+            <li>Nobody may follow alongside the rover for the purpose of providing feedback to the operators, though members of the judging team, media, non-operator team members, and other spectators may follow a rover at the judges' discretion.</li>
+        </ul>
+        <hr class="my-4" style="border-color: #212529">
+        <h3>Team Rules</h3>
+        <ul>
+            <li>There is no restriction on the number of team members or operators allowed.</li>
+            <li>Team members may be undergraduate or graduate students and teams are permitted to include high school students as well</li>
+            <li>Students must be enrolled in at least a half time degree or high school diploma granting course.</li>
+            <li>Students from multiple universities may compete on the same team, and a single university may field multiple teams, as long as there is no overlap between team members, budget, or equipment.</li>
+        </ul>
+         <a class="btn btn-lg" style="color:white;background-color:#891f29;" href="http://urc.marssociety.org/" role="button">Navigate to URC Site</a>
+    </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}
+{% block js %}
+{% endblock %}

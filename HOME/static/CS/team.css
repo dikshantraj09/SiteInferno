@@ -1,0 +1,16 @@
+		#marsimage{
+<!--			    background-color: teal;-->
+                padding-block-start: 3px;
+                margin-top: 10px;
+                border: 2px black solid;
+                margin-bottom: 5px;
+		}
+		#spacing{
+		padding-block-start: 3px;
+		}
+		.bgimage{
+        padding-top: 3px;
+        padding-block-end: 4px;
+		background-image: url('/media/1781.jpg')
+
+		}

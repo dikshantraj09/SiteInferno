@@ -1,0 +1,40 @@
+{% extends 'HOME/basic.html' %}
+{% load static %}
+{% block CSS %}
+ <link rel="stylesheet" href="{% static 'CS/irdc.css' %}" type="text/css" />
+{% endblock %}
+{% block title%}URC{% endblock %}
+{%block dropactive %}active{% endblock %}
+{% block body %}
+  <div class="bg1image">
+    <div class="container">
+      <div class="bg2image">
+    <div id="spacing">
+      <h1 class="display-4 text-center">Indian Rover Challenge</h1>
+      <p class="lead">The Indian Rover Challenge (IRC) is an annual robotics competition which features an engineering challenge to engage students worldwide in the next phase of space exploration. IRC is the only robotics and space exploration competition of its kind in Asia-Pacific which aims to ignite and encourage the spirit of innovation amongst budding engineers as they set on a quest to build a space exploration rovers, using their skills and ideas. The competition challenges college students to design and build next-generation Mars Rovers and compete in Mars Simulated conditions. Indian Rover Challenge is a part of the Rover Challenge Series (RCS) of The Mars Society.</p>
+      <hr class="my-4" style="border-color: #212529">
+      <h2>TASKS</h2>
+
+      <h3>ERDT</h3>
+      <p>
+          Extreme Retrieval and Delivery Task is the most physically challenging task for rovers on the field, this task requires Rovers to traverse through challenging terrain which includes rocks, steep slopes, obstacles, sandy areas etc. The Rover has to locate and pick up certain tools from a random location on the field and deliver it at specific location to assist astronauts.
+      </p>
+      <hr class="my-4" style="border-color: #212529">
+      <h3>EQUIPMENT SERVICING</h3>
+      <p>
+          In Equipment Servicing Task rovers are required to perform dexterous operations on an equipment control panel for maintenance operations. Some of the operations include tightening screws, turning knobs, typing on keyboards, operating a joystick etc. The objective is to observe the rovers ability to perform intricate operations for assistance on the field.
+      </p>
+      <hr class="my-4" style="border-color: #212529">
+      <h3>AUTONOMOUS</h3>
+      <p>In Autonomous Task rovers are required to autonomously traverse the field through designated gates with marked directions on the field. There is no tele-operation between the rover and the operator, and the rover must operate as a standalone system. The ability of the on-board system to make locomotive decisions based on available data is greatly tested.</p>
+      <hr class="my-4" style="border-color: #212529">
+      <h3>SCIENCE</h3>
+      <p>The primary goal of Science Cache Task is to conduct in-situ analysis of soil samples on the rover to determine possible existence of life on Mars. Rovers are required to dig and collect soil from designated areas, obtain microscopic view of rock samples, collect panoramic images of surroundings in this mission. The rover also conducts tests to check the presence of life supporting gases.</p>
+    <a class="btn btn-lg" style="color:white;background-color:#891f29;" href="https://southasia.marssociety.org/indianroverchallenge/" role="button">Navigate to IRC Site</a>
+  </div>
+  </div>
+  </div>
+  </div>
+{% endblock %}
+{% block js %}
+{% endblock %}

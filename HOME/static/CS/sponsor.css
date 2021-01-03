@@ -1,0 +1,15 @@
+#heading{
+background-color: lightblue;
+}
+
+#ptext{
+color:white;
+padding-top: 30px;
+}
+
+#spsname{
+color: red;
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 20px;
+}

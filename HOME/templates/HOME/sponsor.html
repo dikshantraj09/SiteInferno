@@ -1,0 +1,35 @@
+{% extends 'HOME/basic.html' %}
+{% load static %}
+{% block CSS %}
+<link rel="stylesheet" href="{% static 'CS/sponsor.css' %}" type="text/css" />
+{% endblock %}
+{% block title%}Sponsors{% endblock %}
+{%block sponsoractive %}active{% endblock %}
+{% block body %}
+
+<div class="jumbotron" id="heading">
+  <h1 class="display-4" style="text-align:center">SPONSORS</h1>
+  <p id="ptext">Sponsors have played a vital role in the emergence of Team Inferno as one of the leading teams of the world. It is the constant support of our sponsors in term of financial and technical resources which has kept us going to pursue our goals.</p>
+</div>
+
+<div class="container mt-3">
+  <div style="text-align:center;padding-bottom:30px;font-size:30px;">OUR SPONSORS</div>
+    <div class="row mb-2">
+      {% for sponsor in sponsors %}
+            <div class="col-md-3">
+              <div class="col-auto d-none d-lg-block">
+          <img src="/media/{{sponsor.img}}" class="bd-placeholder-img" width="200" height="250" aria-label="Placeholder: Thumbnail">
+        </div>
+              <div id="spsname">{{sponsor.name}}</div>
+
+      </div>
+      {% if forloop.counter|divisibleby:4 %}
+         </div> <div class="row mb-2">
+        {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}
+{% block js %}
+{% endblock %}
